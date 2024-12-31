@@ -1,0 +1,109 @@
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,80,142,1) 0%, rgba(0,212,255,1) 100%);
+}
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-left:25%;
+    margin-top:15%;
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(185,149,214,1) 0%, rgba(0,212,255,1) 100%);
+    padding:20px;
+
+    padding-top:10px;
+}
+.container .gameBox{
+    margin-left: 5%;
+}
+.wordDisplay{
+    display:flex;
+    gap:20px;
+    align-items: center;
+    justify-content:center;
+    list-style:none;
+}
+.wordDisplay .letter{
+         width:28px;
+         font-size: 2rem;
+         font-weight: 600;
+         text-align: center;
+         text-transform: uppercase;
+         margin-bottom:10px;
+         border-bottom: 3px solid #000;
+}
+.gameBox .keyboard{
+    display:flex;
+    gap:14px;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.keyboard button{
+    /*width:calc(100% /9- 5px);*/
+    padding:10px;
+    background-color:darkmagenta;
+    color:white;
+    text-transform: uppercase;
+    
+}
+.keyboard button[disabled]
+{
+    opacity:0.6;
+    pointer-events: none;
+}
+.keyboard button:hover{
+    background:rgb(231, 176, 231);
+}
+.gusses{
+    margin-left: 29%;
+}
+.hintText{
+    margin-left: 10%;
+}
+.gameModel .contents{
+    border-radius: 10px;
+    background-color: lightpink;
+    width: 10%;
+    padding-right: 20%;
+    padding:50px;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+.gameModel{
+    opacity:0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease;  
+    margin-right:50%;
+    z-index:1000;
+}
+.gameModel.show{
+    opacity:1 ;
+    pointer-events: auto;
+    
+}
+.contents img{
+    height: 140px;
+    width: 140px;;
+}
+.contents p{
+    width: 200px;
+}
+.contents h2{
+  margin-left:15%;
+}
+.contents button{
+    margin-left: 25%;
+    padding: 5px;
+    color: azure;
+    background-color: darkslategrey;
+}
